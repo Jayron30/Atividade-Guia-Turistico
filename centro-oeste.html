@@ -77,59 +77,8 @@
         <div class="image-hover-container">
             <img src="https://media.istockphoto.com/id/1059707838/pt/vetorial/brazil-center-west-region.jpg?s=612x612&w=0&k=20&c=NL1XPIfy_cVgV7Gg-dg0x3afHZ3RQgSuX8sQlAS9qZ4="
                 class="main-image" alt="Mapa da Região Centro-Oeste">
-            <img src="https://media.istockphoto.com/id/955146950/pt/foto/cattle-in-the-pantanal.jpg?s=612x612&w=0&k=20&c=L_f9d2r7Y-f0K4h0d9_e2W5J-e0h2G3e4k3g2v6d4o4="
-                class="hover-image" alt="Gado no Pantanal">
         </div>
         <div id="player"></div>
-
-        <div id="musicButtonContainer">
-            <button id="toggleMusic" class="btn btn-warning btn-lg">🎶 Tocar Música</button>
-        </div>
-
-        <script>
-            var tag = document.createElement('script');
-            tag.src = "http://www.youtube.com/iframe_api";
-            var firstScriptTag = document.getElementsByTagName('script')[0];
-            firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-            var player;
-            var isPlaying = false;
-
-            function onYouTubeIframeAPIReady() {
-                player = new YT.Player('player', {
-                    height: '1',
-                    width: '1',
-                    videoId: 'lWvYQjDqS2c',
-                    playerVars: {
-                        controls: 0,
-                        modestbranding: 1,
-                        rel: 0,
-                        loop: 1,
-                        playlist: 'lWvYQjDqS2c',
-                        start: 30
-                    },
-                    events: {
-                        'onReady': onPlayerReady
-                    }
-                });
-            }
-
-            function onPlayerReady(event) {
-                player.pauseVideo();
-            }
-
-            document.getElementById('toggleMusic').addEventListener('click', function () {
-                if (isPlaying) {
-                    player.pauseVideo();
-                    this.textContent = "🎶 Tocar Música";
-                    isPlaying = false;
-                } else {
-                    player.playVideo();
-                    this.textContent = "⏸️ Pausar Música";
-                    isPlaying = true;
-                }
-            });
-        </script>
     </div>
 
     <div class="container section-card">
